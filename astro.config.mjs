@@ -5,7 +5,10 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      exclude: ['browser-visual-search', 'onnxruntime-web']
+    }
   },
   integrations: [react()]
 });

@@ -38,10 +38,17 @@ export const BuildIndex = () => {
       
       return fetch(imageUrl)
         .then(res => res.blob())
-        .then(blob => {
+        .then(async blob => {
           const filename = new URL(imageUrl).pathname.split('/').pop() ?? 'image.bin';
           const file = new File([blob], filename, { type: blob.type });
-          return index.addToIndex(file, filename);
+
+          const startTime = performance.now();
+          console.log('Indexing...')
+          await index.addToIndex(file, filename);
+          console.log(`Took ${Math.round((performance.now() - startTime) / 1000)}s`)
+        })
+        .catch(error => {
+          console.error(error);
         })
     }), Promise.resolve()).then(() => {
       console.log('Done - saving');

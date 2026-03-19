@@ -1,15 +1,7 @@
 ---
 import BaseLayout from '@/layouts/base-layout.astro';
+import { BuildIndex } from '@/components/build-index/build-index';
 ---
 <BaseLayout>
-	<main>
-		<h1>IIIF Visual Search Demo</h1>
-
-		<ul>
-			<li>
-				<a href="build-index">Build Index</a>
-				<a href="search">Search</a>
-			</li>
-		</ul>
-	</main>
+	<BuildIndex client:only="react" />
 </BaseLayout>

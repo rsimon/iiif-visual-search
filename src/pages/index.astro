@@ -1,9 +1,13 @@
 ---
+import { OpenDirectory } from '@/components/shared/open-directory';
 import BaseLayout from '@/layouts/base-layout.astro';
 ---
 <BaseLayout>
 	<main>
 		<h1>IIIF Visual Search Demo</h1>
+
+		<OpenDirectory client:only="react" />
+
 		<ul>
 			<li>
 				<a href="build-index">Build Index</a>

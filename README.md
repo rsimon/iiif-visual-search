@@ -1,2 +1,3 @@
-# iiif-visual-search
-A prototype visual search environment for IIIF images
+# IIIF Visual Search
+
+A prototype visual search environment for IIIF images.

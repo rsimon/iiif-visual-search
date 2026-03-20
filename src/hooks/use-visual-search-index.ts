@@ -3,7 +3,7 @@ import { useDirectoryHandle } from './use-directory-handle';
 import { openIndex, type VisualSearchIndex } from 'browser-visual-search';
 
 const SEGMENTER_URL = '/models/fastsam-s.onnx';
-const EMBEDDER_URL = '/models/clip-vit-b32-visual-int8.onnx';
+const EMBEDDER_URL = '/models/clip-vit-b32-visual.onnx';
 
 export const useVisualSearchIndex = () => {
   const { handle } = useDirectoryHandle();
